@@ -1,3 +1,8 @@
+/**
+ * @file task1.cpp
+ * @brief CLI driver for Task 1 (infix → prefix only).
+ */
+
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -38,6 +43,18 @@ bool run_batch_file(const char *path)
 
 } // namespace
 
+/**
+ * @brief Entry point for `task1` binary.
+ *
+ * Usage:
+ * - `task1` — read one formula from stdin.
+ * - `task1 path.txt` — one formula per line.
+ * - `task1 "(p>q)"` — single formula argument if path is not a file.
+ *
+ * @param argc Argument count.
+ * @param argv Argument vector.
+ * @return 0 on success, 1 on read failure.
+ */
 int main(int argc, char *argv[])
 {
     std::cout << kInputHint;

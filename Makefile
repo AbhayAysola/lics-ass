@@ -20,7 +20,14 @@ tree.o: tree.cpp tree.hpp
 truth_table.o: truth_table.cpp truth_table.hpp tree.hpp
 	$(CXX) $(CXXFLAGS) -c truth_table.cpp
 
+docs:
+	doxygen Doxyfile
+	@echo "Open docs/html/index.html in a browser."
+
+doc-clean:
+	rm -rf docs/html
+
 clean:
 	rm -f task1 logic_a1 tree.o truth_table.o infix_prefix.o
 
-.PHONY: all clean
+.PHONY: all clean docs doc-clean

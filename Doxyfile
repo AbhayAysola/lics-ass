@@ -1,0 +1,54 @@
+# Doxygen configuration — CS F214 Assignment 1 (Part A)
+
+PROJECT_NAME           = "Logic in CS — Assignment 1"
+PROJECT_BRIEF          = "Parse trees and algorithms on propositional logic formulas"
+PROJECT_NUMBER         = 1.0
+OUTPUT_DIRECTORY       = docs
+CREATE_SUBDIRS         = NO
+
+INPUT                  = docs/mainpage.md \
+                         docs/analysis.md \
+                         infix_prefix.cpp \
+                         infix_prefix.hpp \
+                         tree.cpp \
+                         tree.hpp \
+                         truth_table.cpp \
+                         truth_table.hpp \
+                         task1.cpp \
+                         main.cpp
+INPUT_ENCODING         = UTF-8
+RECURSIVE              = NO
+EXCLUDE                =
+EXCLUDE_PATTERNS       =
+
+USE_MDFILE_AS_MAINPAGE = docs/mainpage.md
+
+EXTRACT_ALL            = NO
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = NO
+HIDE_UNDOC_MEMBERS     = YES
+HIDE_UNDOC_CLASSES     = YES
+JAVADOC_AUTOBRIEF      = YES
+BRIEF_MEMBER_DESC      = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_NO_PARAMDOC       = YES
+
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+HTML_EXTRA_STYLESHEET  = docs/doxygen-extra.css
+GENERATE_TREEVIEW      = YES
+DISABLE_INDEX          = NO
+
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+VERBATIM_HEADERS       = YES
+
+MARKDOWN_SUPPORT       = YES
+
+HAVE_DOT               = NO
+
+QUIET                  = NO
+
+GENERATE_LATEX         = NO

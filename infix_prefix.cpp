@@ -1,3 +1,8 @@
+/**
+ * @file infix_prefix.cpp
+ * @brief Implementation of infix-to-prefix conversion (reverse scan + stack).
+ */
+
 #include "infix_prefix.hpp"
 
 #include <algorithm>
@@ -10,9 +15,6 @@ bool is_connective(char c)
 
 std::string infix_to_prefix(const std::string &infix)
 {
-    // Scan the infix string right-to-left (standard infix → prefix trick).
-    // Treat ')' like '(' and '(' like ')' so the same stack logic as
-    // infix-to-postfix applies; reverse the collected operators at the end.
     std::stack<char> pending;
     std::string prefix_reversed;
 
@@ -21,9 +23,7 @@ std::string infix_to_prefix(const std::string &infix)
         const char c = *it;
 
         if (c == ')' || is_connective(c))
-        {
             pending.push(c);
-        }
         else if (c == '(')
         {
             while (!pending.empty() && pending.top() != ')')
@@ -32,12 +32,10 @@ std::string infix_to_prefix(const std::string &infix)
                 pending.pop();
             }
             if (!pending.empty())
-                pending.pop(); // matching ')'
+                pending.pop();
         }
         else
-        {
-            prefix_reversed += c; // propositional atom
-        }
+            prefix_reversed += c;
     }
 
     std::reverse(prefix_reversed.begin(), prefix_reversed.end());

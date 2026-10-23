@@ -1,3 +1,8 @@
+/**
+ * @file main.cpp
+ * @brief CLI driver for `logic_a1` — Tasks 1–5 on each input formula.
+ */
+
 #include <fstream>
 #include <iostream>
 #include <string>
@@ -34,6 +39,14 @@ static void run_pipeline(const std::string &infix)
     Tree::destroy(root);
 }
 
+/**
+ * @brief Entry point for `logic_a1` binary.
+ * @see task1.cpp for argument conventions (file, stdin, or literal formula).
+ *
+ * @param argc Argument count.
+ * @param argv Argument vector.
+ * @return 0 on success.
+ */
 int main(int argc, char *argv[])
 {
     std::cout << "NOTE : infix needs to be well formed and fully parenthesized\n";

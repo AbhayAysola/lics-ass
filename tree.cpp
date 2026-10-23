@@ -1,9 +1,12 @@
+/**
+ * @file tree.cpp
+ * @brief Parse tree construction, traversals, height, and evaluation.
+ */
+
 #include "tree.hpp"
 
 #include <algorithm>
-#include <cctype>
 #include <stack>
-#include <vector>
 
 namespace
 {

@@ -1,6 +1,12 @@
+/**
+ * @file truth_table.cpp
+ * @brief Truth table generation by exhaustive atom assignments.
+ */
+
 #include "truth_table.hpp"
 
 #include <iomanip>
+#include <map>
 
 namespace
 {
